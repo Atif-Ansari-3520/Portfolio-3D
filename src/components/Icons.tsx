@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Github(props: React.SVGProps<SVGSVGElement>) {
+export function Github(props: React.SVGProps<SVGSVGElement> & { size?: number | string }) {
   return (
     <svg
       fill="currentColor"
@@ -14,7 +14,7 @@ export function Github(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function Linkedin(props: React.SVGProps<SVGSVGElement>) {
+export function Linkedin(props: React.SVGProps<SVGSVGElement> & { size?: number | string }) {
   return (
     <svg
       fill="currentColor"
@@ -28,7 +28,7 @@ export function Linkedin(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function Twitter(props: React.SVGProps<SVGSVGElement>) {
+export function Twitter(props: React.SVGProps<SVGSVGElement> & { size?: number | string }) {
   return (
     <svg
       fill="currentColor"
