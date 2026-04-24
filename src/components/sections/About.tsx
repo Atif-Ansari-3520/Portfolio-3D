@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
+import Magnetic from "../Magnetic";
 
 const focusTags = [
   "Full-Stack Development",
@@ -15,7 +17,7 @@ const focusTags = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-screen flex items-center">
+    <section id="about" className="py-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
       {/* Background Subtle Accent */}
       <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-[var(--primary)]/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
@@ -100,6 +102,52 @@ export default function About() {
         </motion.div>
 
       </div>
+
+      {/* Modern Magnetic Download CV Button */}
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+        className="mt-24 flex justify-center w-full"
+      >
+        <Magnetic>
+          <motion.a
+            href="/cv.png"
+            download="Atif_Ansari_CV.png"
+            whileHover="hover"
+            whileTap="tap"
+            variants={{
+              hover: { scale: 1.02 },
+              tap: { scale: 0.95 }
+            }}
+            className="group relative flex items-center justify-center gap-4 px-10 py-5 bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.08)] border border-white/10 hover:border-white/20 shadow-2xl backdrop-blur-xl text-white font-space font-bold uppercase tracking-widest rounded-full overflow-hidden transition-all duration-300 ease-out"
+          >
+            {/* Soft inner glow gradient */}
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/10 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out" />
+            
+            <span className="relative z-10">Download CV</span>
+            
+            <motion.div
+              variants={{
+               hover: { backgroundColor: "var(--primary)", color: "#000" },
+               tap: { scale: 0.8 }
+              }}
+              className="relative z-10 flex items-center justify-center w-10 h-10 bg-white/10 text-white rounded-full transition-colors duration-300"
+            >
+              <motion.div
+                variants={{
+                  hover: { y: [0, 4, 0] },
+                }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                <Download className="w-5 h-5" />
+              </motion.div>
+            </motion.div>
+          </motion.a>
+        </Magnetic>
+      </motion.div>
+
     </section>
   );
 }
