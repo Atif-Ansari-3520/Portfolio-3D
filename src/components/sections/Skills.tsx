@@ -67,19 +67,38 @@ const marqueeTools = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="pt-24 pb-12 relative px-4 md:px-12 max-w-7xl mx-auto">
-      <motion.div
-         initial={{ opacity: 0, y: 30 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         viewport={{ once: true, margin: "-100px" }}
-         transition={{ duration: 0.6 }}
-         className="mb-16 text-center"
-      >
-        <h2 className="text-4xl md:text-5xl font-space font-bold mb-4">
-          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">Skills</span>
-        </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] mx-auto rounded-full" />
-      </motion.div>
+    <section id="skills" className="pt-16 md:pt-24 pb-16 md:pb-12 relative px-4 md:px-12 max-w-7xl mx-auto">
+      <div className="mb-16 text-center">
+        <div className="overflow-hidden">
+          <motion.h2
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "circOut" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-space font-bold mb-2"
+          >
+            My
+          </motion.h2>
+        </div>
+        <div className="overflow-hidden">
+          <motion.h2
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "circOut" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-space font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]"
+          >
+            Skills
+          </motion.h2>
+        </div>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: 96 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "circOut" }}
+          className="h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] mx-auto rounded-full"
+        />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
         {skillsData.map((category, index) => (
@@ -128,8 +147,28 @@ export default function Skills() {
         className="mt-10 border-t border-white/5 pt-10"
       >
         <div className="text-center mb-10">
-          <h3 className="text-2xl font-space font-bold text-white mb-2">Technical Mastery</h3>
-          <p className="text-gray-500 text-sm font-mono uppercase tracking-[0.3em]">Modern Stack & Infrastructure</p>
+          <div className="overflow-hidden">
+            <motion.h3
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "circOut" }}
+              className="text-2xl font-space font-bold text-white mb-2"
+            >
+              Technical Mastery
+            </motion.h3>
+          </div>
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1, ease: "circOut" }}
+              className="text-gray-500 text-sm font-mono uppercase tracking-[0.3em]"
+            >
+              Modern Stack & Infrastructure
+            </motion.p>
+          </div>
         </div>
 
         <div className="relative overflow-hidden">

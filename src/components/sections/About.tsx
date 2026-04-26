@@ -17,7 +17,7 @@ const focusTags = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
+    <section id="about" className="py-16 md:py-24 pb-28 md:pb-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
       {/* Background Subtle Accent */}
       <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-[var(--primary)]/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
@@ -30,11 +30,28 @@ export default function About() {
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-space font-bold mb-10 tracking-tighter text-white">
-            ABOUT <span className="opacity-50">ME</span>
-          </h2>
+          <div className="space-y-0 mb-10 overflow-hidden">
+            <motion.h2
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "circOut" }}
+              className="text-4xl sm:text-5xl md:text-7xl font-space font-bold tracking-tighter text-white leading-none"
+            >
+              ABOUT
+            </motion.h2>
+            <motion.h2
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1, ease: "circOut" }}
+              className="text-4xl sm:text-5xl md:text-7xl font-space font-bold tracking-tighter text-gray-500/30 leading-none"
+            >
+              ME.
+            </motion.h2>
+          </div>
           
-          <div className="space-y-6 text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
+          <div className="space-y-4 md:space-y-6 text-gray-300 text-base md:text-xl leading-relaxed max-w-xl">
              <p>
                 I'm a <span className="text-white font-bold">Full Stack Developer</span> and a <span className="text-white font-bold">6th Semester Software Engineering</span> student based in <span className="text-white font-bold">Narowal,Punjab</span>, Pakistan. I'm still learning and improving my skills by building small projects and exploring modern web technologies.
              </p>
@@ -109,7 +126,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-        className="mt-24 flex justify-center w-full"
+        className="mt-16 md:mt-24 flex justify-center w-full"
       >
         <Magnetic>
           <motion.a

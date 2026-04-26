@@ -61,10 +61,10 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Bottom Navbar */}
-      <nav className="md:hidden fixed bottom-6 left-6 right-6 z-50 glass rounded-2xl px-6 py-4 flex justify-between items-center shadow-2xl border border-white/10">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] flex justify-around items-center shadow-2xl border-t border-white/10">
         {links.map((link) => {
           const Icon = link.icon;
-          const isActive = pathname === link.href; // Note: Simple anchor detection might require intersection observer for true active state, using basic matching here
+          const isActive = pathname === link.href;
           return (
             <Link
               key={link.name}

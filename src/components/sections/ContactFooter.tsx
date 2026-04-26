@@ -29,7 +29,7 @@ const socialLinks = [
 export default function ContactFooter() {
   return (
     <>
-      <section id="contact" className="py-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-[90vh] flex flex-col justify-center">
+      <section id="contact" className="py-16 md:py-24 pb-28 md:pb-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-[90vh] flex flex-col justify-center">
         
         {/* Subtle Background Glows */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--primary)]/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
@@ -49,7 +49,7 @@ export default function ContactFooter() {
                  initial={{ y: 80 }}
                  whileInView={{ y: 0 }}
                  transition={{ duration: 0.8, ease: "circOut" }}
-                 className="text-6xl md:text-8xl font-space font-light text-white tracking-tighter leading-none flex items-center"
+                 className="text-4xl sm:text-6xl md:text-8xl font-space font-light text-white tracking-tighter leading-none flex items-center"
                >
                  LE<span className="relative">T<span className="absolute -top-1 left-1/2 -translate-x-1/2 w-4 h-4 border-2 border-white rounded-full opacity-40"></span></span>'S
                </motion.h2>
@@ -57,7 +57,7 @@ export default function ContactFooter() {
                  initial={{ y: 80 }}
                  whileInView={{ y: 0 }}
                  transition={{ duration: 0.8, delay: 0.1, ease: "circOut" }}
-                 className="text-6xl md:text-8xl font-space font-bold text-gray-500/30 tracking-tighter leading-none"
+                 className="text-4xl sm:text-6xl md:text-8xl font-space font-bold text-gray-500/30 tracking-tighter leading-none"
                >
                  CONNECT.
                </motion.h2>
@@ -67,7 +67,7 @@ export default function ContactFooter() {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                transition={{ delay: 0.5, duration: 1 }}
-               className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-lg mb-12"
+               className="text-gray-400 text-base md:text-xl leading-relaxed max-w-lg mb-8 md:mb-12"
             >
               Always interested in new opportunities, collaborations, and conversations about technology and design.
             </motion.p>
@@ -77,7 +77,7 @@ export default function ContactFooter() {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                transition={{ delay: 0.7 }}
-               className="group flex items-center gap-3 text-lg md:text-xl text-white font-medium hover:text-[var(--primary)] transition-colors w-fit"
+               className="group flex items-center gap-3 text-sm sm:text-lg md:text-xl text-white font-medium hover:text-[var(--primary)] transition-colors w-fit break-all sm:break-normal"
             >
               atifansari7274@gmail.com 
               <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" size={24} />
@@ -92,12 +92,12 @@ export default function ContactFooter() {
              transition={{ duration: 0.8, delay: 0.2 }}
              className="flex flex-col"
           >
-            <span className="text-xl font-space font-extrabold text-white uppercase tracking-[0.3em] mb-8 flex items-center gap-3">
+            <span className="text-sm sm:text-xl font-space font-extrabold text-white uppercase tracking-[0.15em] sm:tracking-[0.3em] mb-6 sm:mb-8 flex items-center gap-3">
               <span className="w-1 h-1 rounded-full bg-[var(--primary)] animate-pulse"></span>
               CLICK TO DIRECT MESSAGE
             </span>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" suppressHydrationWarning>
               {socialLinks.map((link, i) => (
                 <motion.a
                   key={link.title}
@@ -108,7 +108,7 @@ export default function ContactFooter() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   whileHover={{ scale: 1.02 }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 bg-[#0E121C] border border-white/5 rounded-2xl flex flex-col gap-1 hover:bg-white/[0.03] hover:border-white/10 transition-all group"
+                  className="p-4 sm:p-6 bg-[#0E121C] border border-white/5 rounded-2xl flex flex-col gap-1 hover:bg-white/[0.03] hover:border-white/10 transition-all group"
                 >
                   <span className="text-white text-lg font-space font-bold group-hover:text-[var(--primary)] transition-colors">
                     {link.title}
@@ -126,11 +126,11 @@ export default function ContactFooter() {
 
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 bg-[#0B0F19]">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6" suppressHydrationWarning>
           <p className="text-gray-600 text-[10px] font-mono tracking-[0.4em] uppercase" suppressHydrationWarning>
             © {new Date().getFullYear()} M. ATIF ANSARI
           </p>
-          <div className="text-gray-700 text-[9px] font-mono uppercase tracking-[0.5em]">
+          <div className="text-gray-700 text-[9px] font-mono uppercase tracking-[0.5em]" suppressHydrationWarning>
             Software Engineer / Full Stack Developer
           </div>
         </div>

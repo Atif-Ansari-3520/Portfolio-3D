@@ -52,7 +52,7 @@ export default function Hero() {
 
   // If not mounted, render a shell to match server-side HTML (avoids hydration mismatch)
   const content = (
-    <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto flex flex-col items-center mt-40 lg:mt-0">
+    <div className="relative z-10 text-center px-6 w-full max-w-4xl mx-auto flex flex-col items-center">
       <motion.p 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="text-5xl lg:text-7xl font-space font-bold text-white mb-6 tracking-tight leading-tight"
+        className="text-4xl sm:text-5xl lg:text-7xl font-space font-bold text-white mb-6 tracking-tight leading-tight"
       >
         Hi, I'm <br className="md:hidden" />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
@@ -75,8 +75,8 @@ export default function Hero() {
       </motion.h1>
 
       <div className="h-14 md:h-16 mb-10 flex items-center justify-center">
-        <span className="text-xl md:text-3xl text-gray-300 font-light mr-3 whitespace-nowrap">I AM</span>
-        <span className="text-xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[var(--accent)] border-r-4 border-white pr-2 animate-pulse whitespace-nowrap min-w-[20px]">
+        <span className="text-base sm:text-xl md:text-3xl text-gray-300 font-light mr-2 sm:mr-3 whitespace-nowrap">I AM</span>
+        <span className="text-base sm:text-xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[var(--accent)] border-r-4 border-white pr-2 animate-pulse whitespace-nowrap min-w-[20px]">
           {mounted ? `"${text}"` : ""}
         </span>
       </div>
@@ -87,10 +87,10 @@ export default function Hero() {
          transition={{ delay: 0.8 }}
          className="flex flex-wrap justify-center gap-4 mt-4"
       >
-        <a href="#projects" className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium backdrop-blur-md hover:bg-[var(--primary)] hover:border-[var(--primary)] hover:shadow-[0_0_20px_rgba(108,99,255,0.4)] transition-all duration-300">
+        <a href="#projects" className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white/5 border border-white/10 text-white text-sm sm:text-base font-medium backdrop-blur-md hover:bg-[var(--primary)] hover:border-[var(--primary)] hover:shadow-[0_0_20px_rgba(108,99,255,0.4)] transition-all duration-300">
           View Projects
         </a>
-        <a href="#contact" className="px-8 py-4 rounded-full glass text-white font-medium hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+        <a href="#contact" className="px-6 sm:px-8 py-3 sm:py-4 rounded-full glass text-white text-sm sm:text-base font-medium hover:bg-white/10 hover:border-white/20 transition-all duration-300">
           Contact Me
         </a>
       </motion.div>
@@ -131,7 +131,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
+        className="absolute bottom-20 md:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
       >
         <span className="text-xs text-gray-400 tracking-widest uppercase text-shadow">Scroll</span>
         <ChevronDown className="text-gray-400 animate-bounce" size={20} />

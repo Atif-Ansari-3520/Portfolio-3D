@@ -167,19 +167,38 @@ function InteractiveCard({ project, index }: { project: any, index: number }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="pt-12 pb-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-screen">
-      <motion.div
-         initial={{ opacity: 0, y: 30 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         viewport={{ once: true, margin: "-100px" }}
-         transition={{ duration: 0.6 }}
-         className="mb-16 text-center"
-      >
-        <h2 className="text-4xl md:text-5xl font-space font-bold mb-4">
-          Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">Projects</span>
-        </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] mx-auto rounded-full" />
-      </motion.div>
+    <section id="projects" className="pt-12 pb-28 md:pb-24 relative px-4 md:px-12 max-w-7xl mx-auto min-h-screen">
+      <div className="mb-16 text-center">
+        <div className="overflow-hidden">
+          <motion.h2
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "circOut" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-space font-bold mb-2"
+          >
+            Featured
+          </motion.h2>
+        </div>
+        <div className="overflow-hidden">
+          <motion.h2
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "circOut" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-space font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]"
+          >
+            Projects
+          </motion.h2>
+        </div>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: 96 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "circOut" }}
+          className="h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] mx-auto rounded-full"
+        />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         {projectsData.map((project, index) => (
