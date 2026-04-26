@@ -61,7 +61,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Bottom Navbar */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] flex justify-around items-center shadow-2xl border-t border-white/10">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass px-2 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] flex justify-evenly items-center shadow-2xl border-t border-white/10">
         {links.map((link) => {
           const Icon = link.icon;
           const isActive = pathname === link.href;
@@ -69,12 +69,12 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`flex flex-col items-center gap-1 transition-colors ${
+              className={`flex flex-col items-center gap-0.5 px-2 py-1 rounded-lg transition-colors ${
                 isActive ? "text-[var(--primary)]" : "text-gray-400 hover:text-white"
               }`}
             >
-              <Icon size={20} />
-              <span className="text-[10px]">{link.name}</span>
+              <Icon size={18} />
+              <span className="text-[9px] leading-tight">{link.name}</span>
             </Link>
           );
         })}

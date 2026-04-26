@@ -115,7 +115,7 @@ export default function Hero() {
           muted 
           playsInline 
           suppressHydrationWarning
-          className="w-full h-full object-cover opacity-60"
+          className="absolute inset-0 w-full h-full min-w-full min-h-full object-cover opacity-60"
         >
           <source src="/images/hero-video-mobile.mp4" type="video/mp4" />
         </video>
